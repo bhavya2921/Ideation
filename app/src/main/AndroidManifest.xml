@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ideation">
         <activity
+            android:name=".BottomNavActivity"
+            android:exported="false" />
+        <activity
             android:name=".EmailVerificationActivity"
             android:exported="false" />
         <activity
