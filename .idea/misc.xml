@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/drawable/email_vector.xml" value="0.115" />
         <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/drawable/username_vector.xml" value="0.115" />
         <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/font/caveat_brush.xml" value="0.20572916666666666" />
         <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/layout/activity_login.xml" value="0.17552083333333332" />
         <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/layout/activity_register.xml" value="0.17552083333333332" />
       </map>
     </option>
   </component>
