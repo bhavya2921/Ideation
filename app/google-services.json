@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "813479867575",
+    "project_id": "ideation-bc37c",
+    "storage_bucket": "ideation-bc37c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813479867575:android:31974de7368e8fda1cc932",
+        "android_client_info": {
+          "package_name": "com.example.ideation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813479867575-h8h0gcpanj7rcvqsbr0vcbf0dl3clrtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAniYvxMOmKO2Ed3Iatn_aesBqpK5r4kmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813479867575-h8h0gcpanj7rcvqsbr0vcbf0dl3clrtp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
