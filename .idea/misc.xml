@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/drawable/add_vec.xml" value="0.1" />
         <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/drawable/background.xml" value="0.1" />
         <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/drawable/bookmarks_vec.xml" value="0.113" />
         <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/drawable/edit_vec.xml" value="0.115" />
@@ -16,6 +17,8 @@
         <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/layout/activity_register.xml" value="0.17552083333333332" />
         <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/layout/fragment_blank.xml" value="0.17552083333333332" />
+        <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/layout/fragment_home.xml" value="0.17552083333333332" />
+        <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/layout/post_item.xml" value="0.17552083333333332" />
         <entry key="..\:/cse 3rd sem iit/android projects/Ideation2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.17552083333333332" />
       </map>
     </option>
