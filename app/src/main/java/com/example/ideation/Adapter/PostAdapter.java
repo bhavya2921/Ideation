@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ideation.CommentPageActivity;
 import com.example.ideation.Model.PostModel;
 import com.example.ideation.Model.UserModel;
 import com.example.ideation.R;
@@ -103,6 +104,19 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.HomeViewHolder
                     ref.child("saves").child(post.getPostUrl()).child(uid).setValue(true);
                 else
                     ref.child("saves").child(post.getPostUrl()).child(uid).removeValue();
+            }
+        });
+
+        holder.comment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoComments(post.getPostUrl(), post.getUserID());
+            }
+        });
+        holder.commentcount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoComments(post.getPostUrl(), post.getUserID());
             }
         });
 
@@ -207,6 +221,13 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.HomeViewHolder
 
             }
         });
+    }
+
+    public void gotoComments(String posturl,String postUserId){
+        Intent intent = new Intent(context, CommentPageActivity.class);
+        intent.putExtra("postId",posturl);
+        intent.putExtra("authorId",postUserId);
+        context.startActivity(intent);
     }
 
 }
