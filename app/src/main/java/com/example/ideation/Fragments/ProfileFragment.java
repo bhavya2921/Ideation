@@ -17,7 +17,6 @@ import android.widget.Toast;
 
 import com.example.ideation.Model.PostModel;
 import com.example.ideation.Model.UserModel;
-import com.example.ideation.R;
 import com.example.ideation.RegisterActivity;
 import com.example.ideation.databinding.FragmentProfileBinding;
 import com.google.android.gms.tasks.OnSuccessListener;
