@@ -173,6 +173,28 @@
                 app:layout_constraintStart_toEndOf="@+id/userName"
                 app:tint="#E35E5E" />
 
+            <TextView
+                android:id="@+id/repocount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:text="6 public Repos "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <TextView
+                android:id="@+id/reposLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="104dp"
+                android:layout_marginTop="26dp"
+                android:text="Go to Repos"
+                android:textColor="#27B2F1"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/repocount"
+                app:layout_constraintTop_toBottomOf="@+id/linkdinLink" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
