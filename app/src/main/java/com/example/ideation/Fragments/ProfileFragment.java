@@ -35,7 +35,6 @@ public class ProfileFragment extends Fragment {
 
     FragmentProfileBinding binding;
     FirebaseAuth fAuth;
-    FirebaseFirestore fstore;
     FirebaseDatabase database;
     FirebaseStorage storage;
     ActivityResultLauncher<String> launcher;
@@ -47,7 +46,6 @@ public class ProfileFragment extends Fragment {
         binding=FragmentProfileBinding.
                 inflate(inflater, container, false);
         fAuth = FirebaseAuth.getInstance();
-        fstore = FirebaseFirestore.getInstance();
         database = FirebaseDatabase.getInstance();
         storage = FirebaseStorage.getInstance();
 
@@ -55,11 +53,29 @@ public class ProfileFragment extends Fragment {
         getFollowingCount();
         getPostCount();
 
+        binding.gitHubLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://github.com/bhavya2921");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        binding.linkdinLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.linkedin.com/in/bhavya-agrawal-0a3521202/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
         launcher = registerForActivityResult(new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
             @Override
             public void onActivityResult(Uri uri) {
                 binding.userProfileImage.setImageURI(uri);
-                final StorageReference reference = storage.getReference().child("image");
+                final StorageReference reference = storage.getReference().child(fAuth.getUid());
                 reference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {

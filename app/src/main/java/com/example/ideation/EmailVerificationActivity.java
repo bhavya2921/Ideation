@@ -28,7 +28,6 @@ public class EmailVerificationActivity extends AppCompatActivity implements Adap
     FirebaseUser fuser;
     String profession;
     FirebaseAuth fAuth;
-    FirebaseFirestore fstore;
     String email,pass;
     FirebaseDatabase db;
 
@@ -42,8 +41,6 @@ public class EmailVerificationActivity extends AppCompatActivity implements Adap
         setSpinner();
 
         binding.userEmail.setText(email);
-
-
 
         binding.submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,9 +64,9 @@ public class EmailVerificationActivity extends AppCompatActivity implements Adap
                                 SharedPreferences sp = getSharedPreferences("handleReg",MODE_PRIVATE);
                                 sp.edit().putInt("posi",2).apply();
                                 startActivity(new Intent(EmailVerificationActivity.this, BottomNavActivity.class));
+                                finish();
                             }
                         });
-                fstore.collection("Users").document(userID).set(user);
             }
         });
     }
@@ -94,7 +91,6 @@ public class EmailVerificationActivity extends AppCompatActivity implements Adap
 
     private void initialise() {
         fuser = FirebaseAuth.getInstance().getCurrentUser();
-        fstore = FirebaseFirestore.getInstance();
         fAuth = FirebaseAuth.getInstance();
         email= getIntent().getStringExtra("email");
         pass = getIntent().getStringExtra("password");

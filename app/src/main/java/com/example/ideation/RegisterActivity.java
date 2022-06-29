@@ -57,6 +57,7 @@ public class RegisterActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+
                                 FirebaseUser fuser = mAuth.getCurrentUser();
                                 fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override

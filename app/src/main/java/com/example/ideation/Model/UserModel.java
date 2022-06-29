@@ -53,6 +53,7 @@ public class UserModel implements Serializable {
         this.followCount=0;
         this.Address=address;
         this.imageURL=imageURL;
+        this.bio = "";
     }
 
     public String getUserName() {

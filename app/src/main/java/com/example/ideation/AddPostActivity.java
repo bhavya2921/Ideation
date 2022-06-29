@@ -21,7 +21,6 @@ public class AddPostActivity extends AppCompatActivity {
 
     FirebaseAuth fAuth;
     ActivityAddPostBinding binding;
-    FirebaseFirestore fstore;
     FirebaseDatabase db;
     String uID,username,profession;
     PostModel post = new PostModel();
@@ -73,14 +72,11 @@ public class AddPostActivity extends AppCompatActivity {
         String postid = ref.push().getKey();
         post.setPostUrl(postid);
         ref.child(postid).setValue(post);
-        fstore.collection("posts").
-                document(post.getPostUrl()).set(post);
         startActivity(new Intent(AddPostActivity.this, BottomNavActivity.class));
     }
 
     private void initialise() {
         fAuth= FirebaseAuth.getInstance();
-        fstore = FirebaseFirestore.getInstance();
         uID = fAuth.getCurrentUser().getUid();
         db=FirebaseDatabase.getInstance();
 
